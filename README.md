@@ -1,9 +1,18 @@
-# Facerecognition_ai_ml
-This project implements a real-time face recognition application using Python, OpenCV, and deep learning (CNN with TensorFlow/Keras). It supports image preprocessing, dataset training, and real-time identity detection with optimized performance. The repository includes code, trained models, and documentation for setup and usage.
+#  Real-Time Face Recognition using OpenCV  
+
+##  PREVIEW  
+
+A simple **real-time face recognition system** built with **Python, OpenCV, and Haar Cascade Classifiers**.  
+This project allows users to upload an image and then matches it with faces detected via webcam using **template matching**.  
+
+### Features  
 - Upload an image via Tkinter file dialog  
 - Real-time face detection with Haar Cascade  
 - Template matching for recognition  
-- Bounding boxes + labels for matched faces
+- Bounding boxes + labels for matched faces  
+
+---
+
 ##  CODE  
 
 ```python
@@ -49,10 +58,22 @@ else:
     cap.release()
     cv2.destroyAllWindows()
 
-## How to run
+### Blame
 
-git clone https://github.com/your-username/face-recognition-opencv.git
-cd face-recognition-opencv
-pip install -r requirements.txt
-python main.py
+load_image() → Opens file dialog, loads selected image in grayscale, extracts file name.
 
+cv2.CascadeClassifier → Uses Haar Cascade model for real-time face detection.
+
+while True loop → Continuously captures live video frames from the webcam.
+
+cv2.cvtColor → Converts frames to grayscale for faster detection.
+
+detectMultiScale → Detects faces within the current video frame.
+
+cv2.matchTemplate → Compares uploaded image with detected face regions using template matching.
+
+if correlation > 0.09 → Validates match strength before labeling.
+
+cv2.putText & cv2.rectangle → Draw bounding box and add label (person’s name).
+
+Exit condition (q) → Stops webcam feed and closes all windows.
