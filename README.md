@@ -56,10 +56,11 @@ else:
             break
 
     cap.release()
-    cv2.destroyAllWindows()```
+    cv2.destroyAllWindows()
+    ```python
     
 
-### Blame
+## Blame
 
 load_image() → Opens file dialog, loads selected image in grayscale, extracts file name.
 
