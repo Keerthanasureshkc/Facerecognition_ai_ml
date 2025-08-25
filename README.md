@@ -49,22 +49,10 @@ else:
     cap.release()
     cv2.destroyAllWindows()
 
-### blame
+## How to run
 
-load_image() → Opens file dialog, loads selected image in grayscale, extracts file name.
+git clone https://github.com/your-username/face-recognition-opencv.git
+cd face-recognition-opencv
+pip install -r requirements.txt
+python main.py
 
-cv2.CascadeClassifier → Uses Haar Cascade for face detection.
-
-while True loop → Captures live video frames from webcam.
-
-cv2.cvtColor → Converts frames to grayscale for faster detection.
-
-detectMultiScale → Detects faces in the current frame.
-
-cv2.matchTemplate → Compares uploaded image with detected face region.
-
-if correlation > 0.09 → Checks if match is strong enough to label.
-
-cv2.putText & cv2.rectangle → Draws bounding box and name of matched person.
-
-Exit condition → Press q to quit webcam feed.
