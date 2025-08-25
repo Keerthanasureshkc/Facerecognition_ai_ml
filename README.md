@@ -56,8 +56,8 @@ else:
             break
 
     cap.release()
-    cv2.destroyAllWindows()
-    ```python
+    cv2.destroyAllWindows()```
+    
 
 ### Blame
 
